@@ -13,9 +13,8 @@ import java.util.List;
  * @author gustavooliveira
  */
 
-public class Quarto 
-{
-    
+public class Quarto {
+
     private int id;
     private String tipo;
     private String status; // disponível, ocupado, manutenção
@@ -25,16 +24,14 @@ public class Quarto
     private String tipoVista; // exemplo: serra, mar
     private boolean temCozinha;
     private boolean temVaranda;
-    private Manutencao manutencao ;
-    
+    private Manutencao manutencao;
+
     // Lista estática para persistência em memória
     private static List<Quarto> quartos = new ArrayList<>();
 
-    
-    // Contrutor - criarQuarto 
-    public Quarto(int id, String tipo, String status, int maxCapacidadeHospedes, int numCamas, int numCasasDeBanho, 
-                  String tipoVista, boolean temCozinha, boolean temVaranda) 
-    {
+    // Contrutor - criarQuarto
+    public Quarto(int id, String tipo, String status, int maxCapacidadeHospedes, int numCamas, int numCasasDeBanho,
+            String tipoVista, boolean temCozinha, boolean temVaranda) {
         this.id = id;
         this.tipo = tipo;
         this.status = status;
@@ -44,38 +41,36 @@ public class Quarto
         this.tipoVista = tipoVista;
         this.temCozinha = temCozinha;
         this.temVaranda = temVaranda;
-     }
-    
-    
-    // Método estático para adicionar quartos  
-    public static void adicionarQuarto(Quarto quarto) 
-    {
+    }
+
+    // tenho que criar um novo método aqui
+
+    // Método estático para adicionar quartos
+    public static void adicionarQuarto(Quarto quarto) {
         quartos.add(quarto);
         System.out.println("Quarto adicionado: " + quarto);
     }
-    
+
     // Listar todos os quartos
     public static List<Quarto> listarQuartos() {
         return quartos;
     }
-    
-     // Remover um quarto por ID
+
+    // Remover um quarto por ID
     public static boolean removerQuarto(int id) {
-        
+
         removerManutencao(id);
         return quartos.removeIf(quarto -> quarto.getId() == id);
     }
-    
+
     public static Quarto retornarQuartoPorId(int id) {
-    return quartos.stream()
-            .filter(quarto -> quarto.getId() == id)
-            .findFirst()
-            .orElse(null);
-}
+        return quartos.stream()
+                .filter(quarto -> quarto.getId() == id)
+                .findFirst()
+                .orElse(null);
+    }
 
-    // Getters e Setters - editar quarto 
-
-
+    // Getters e Setters - editar quarto
 
     public int getId() {
         return id;
