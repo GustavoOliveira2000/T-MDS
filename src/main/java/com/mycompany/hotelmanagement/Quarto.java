@@ -48,6 +48,12 @@ public class Quarto
     
     
     // Método estático para adicionar quartos
+
+    //Novo método disponibilidadeQuarto
+    public boolean isDisponivel() {
+        return this.status.equalsIgnoreCase("disponível");
+    }
+    
     public static void adicionarQuarto(Quarto quarto) 
     {
         quartos.add(quarto);
@@ -74,6 +80,8 @@ public class Quarto
 }
 
     // Getters e Setters - editar quarto 
+
+
 
     public int getId() {
         return id;
