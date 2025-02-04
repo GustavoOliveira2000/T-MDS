@@ -47,13 +47,7 @@ public class Quarto
      }
     
     
-    // Método estático para adicionar quartos
-
-    //Novo método disponibilidadeQuarto
-    public boolean isDisponivel() {
-        return this.status.equalsIgnoreCase("disponível");
-    }
-    
+    // Método estático para adicionar quartos  
     public static void adicionarQuarto(Quarto quarto) 
     {
         quartos.add(quarto);
