@@ -10,7 +10,12 @@ public class Ocorrencia {
             this.descricao = descricao;
             this.dataOcorrencia = dataOcorrencia;
             this.hospede = hospede;
-        }
+        public  String getDetalhes(){
+        return "ID da Ocorrência: " + id + "\n" +
+               "Descrição da Ocorrência: " + descricao + "\n" +
+               "Data da Ocorrência: " + dataOcorrencia + "\n" +
+               "Hóspede: " + hospede.getNome();
+    }        }
     public int getId() {
         return id;
     }
