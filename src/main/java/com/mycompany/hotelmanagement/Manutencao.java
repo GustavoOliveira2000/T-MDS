@@ -36,6 +36,11 @@ public class Manutencao
 
     // Métodos de persistência
 
+    //método para atualizar o estado da manutenção
+    public static boolean atualizarStatusManutencao(int id, boolean novoStatus) {
+        //implementação
+    }
+
     // Adicionar uma manutenção
     public static void adicionarManutencao(Manutencao manutencao) {
         manutencoes.add(manutencao);
