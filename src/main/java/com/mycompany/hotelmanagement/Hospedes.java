@@ -9,8 +9,7 @@ package com.mycompany.hotelmanagement;
  * @author gustavooliveira
  */
 
-public class Hospedes 
-{
+public class Hospedes {
     private int id; // Identificador único do hóspede
     private String nome; // Nome do hóspede
     private String email; // Email do hóspede
@@ -57,6 +56,9 @@ public class Hospedes
         this.contacto = contacto;
     }
 
+    public boolean isVip() {
+        return this.email != null && this.email.endsWith("@vip.com");
+    }
 
     @Override
     public String toString() {
