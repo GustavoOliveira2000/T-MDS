@@ -67,6 +67,7 @@ public class Hospedes {
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", contacto='" + contacto + '\'' +
+                ", vip=" + isVip() +
                 '}';
     }
 }
