@@ -3,9 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.hotelmanagement;
+
 import java.util.ArrayList;
 import java.util.List;
-
 
 /**
  *
@@ -13,9 +13,7 @@ import java.util.List;
  *
  */
 
-
-public class Manutencao 
-{
+public class Manutencao {
     private int id; // Identificador único da manutenção
     private int quartoId; // ID do quarto relacionado à manutenção
     private String descricao; // Descrição do tipo de manutenção
@@ -36,9 +34,18 @@ public class Manutencao
 
     // Métodos de persistência
 
-    //método para atualizar o estado da manutenção
+    // método para atualizar o estado da manutenção
     public static boolean atualizarStatusManutencao(int id, boolean novoStatus) {
-        //implementação
+        for (Manutencao manutencao : manutencoes) {
+            if (manutencao.getId() == id) {
+                manutencao.setStatus(novoStatus);
+                System.out.println("Status da manutenção ID " + id + " atualizado para: "
+                        + (novoStatus ? "pendente" : "concluída"));
+                return true;
+            }
+        }
+        System.out.println("Manutenção com ID " + id + " não encontrada.");
+        return false;
     }
 
     // Adicionar uma manutenção
@@ -52,21 +59,20 @@ public class Manutencao
         return manutencoes;
     }
 
-
     // Remover manutenção por ID
     public static boolean removerManutencao(int quartoId) {
         return manutencoes.removeIf(manutencao -> manutencao.getQuartoId() == quartoId);
     }
-    
+
     public static List<Manutencao> verificarManutencaoPorQuarto(int quartoId) {
-    List<Manutencao> manutencoesPendentes = new ArrayList<>();
-    for (Manutencao manutencao : manutencoes) {
-        if (manutencao.getStatus() && manutencao.getQuartoId() == quartoId) { // Verifica status e quartoId
-            manutencoesPendentes.add(manutencao);
+        List<Manutencao> manutencoesPendentes = new ArrayList<>();
+        for (Manutencao manutencao : manutencoes) {
+            if (manutencao.getStatus() && manutencao.getQuartoId() == quartoId) { // Verifica status e quartoId
+                manutencoesPendentes.add(manutencao);
+            }
         }
+        return manutencoesPendentes;
     }
-    return manutencoesPendentes;
-}
 
     // Getters e Setters
 
