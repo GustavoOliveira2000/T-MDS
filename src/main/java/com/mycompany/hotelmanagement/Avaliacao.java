@@ -19,4 +19,34 @@ public class Avaliacao
     private String comentario;
     private Quarto quartos ;
 
+        // Getters
+        public int getId() {
+            return id;
+        }
+    
+        
+        public Hospedes getHospede() {
+            return hospede;
+        }
+    
+        
+        public Reserva getReserva() {
+            return reserva;
+        }
+    
+        
+        public int getNota() {
+            return nota;
+        }
+    
+        
+        public String getComentario() {
+            return comentario;
+        }
+    
+       
+        public Quarto getQuartos() {
+            return quartos;
+        }
+
 }
