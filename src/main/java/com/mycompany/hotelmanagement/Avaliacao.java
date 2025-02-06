@@ -9,8 +9,7 @@ package com.mycompany.hotelmanagement;
  * @author gustavooliveira
  */
 
-public class Avaliacao 
-{
+public class Avaliacao {
 
     private int id;
     private Hospedes hospede ;
