@@ -11,4 +11,11 @@ public class OcorrenciaTest {
         assertEquals("Problema no quarto", ocorrencia.getDescricao());
         assertNotNull(ocorrencia.getDataOcorrencia());
     }
+    @Test
+    public void testSetDescricao() {
+    Ocorrencia ocorrencia = new Ocorrencia(2, "Teste inicial", new java.util.Date(), null);
+    ocorrencia.setDescricao("Nova descrição);
+    assertEquals("Nova descrição", ocorrencia.getDescricao());
+    }
 }
+
