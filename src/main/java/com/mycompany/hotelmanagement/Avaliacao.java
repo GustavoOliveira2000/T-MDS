@@ -18,4 +18,71 @@ public class Avaliacao {
     private String comentario;
     private Quarto quartos ;
 
+        // Getters
+        public int getId() 
+        {
+            return id;
+        }
+    
+        
+        public Hospedes getHospede() 
+        {
+            return hospede;
+        }
+    
+        
+        public Reserva getReserva() 
+        {
+            return reserva;
+        }
+    
+        
+        public int getNota() 
+        {
+            return nota;
+        }
+    
+        
+        public String getComentario() 
+        {
+            return comentario;
+        }
+    
+       
+        public Quarto getQuartos() {
+            return quartos;
+        }
+
+    //setters
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setHospede(Hospedes hospede) {
+        this.hospede = hospede;
+    }
+
+    
+    public void setReserva(Reserva reserva) {
+        this.reserva = reserva;
+    }
+
+    
+    public void setNota(int nota) {
+        if (nota < 1 || nota > 5) {
+            throw new IllegalArgumentException("A nota deve estar entre 1 e 5.");
+        }
+        this.nota = nota;
+    }
+
+   
+    public void setComentario(String comentario) {
+        this.comentario = comentario;
+    }
+
+    
+    public void setQuartos(Quarto quartos) {
+        this.quartos = quartos;
+    }
+
 }
