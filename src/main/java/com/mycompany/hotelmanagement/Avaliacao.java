@@ -50,8 +50,7 @@ public class Avaliacao
         }
     
        
-        public Quarto getQuartos() 
-        {
+        public Quarto getQuartos() {
             return quartos;
         }
 
