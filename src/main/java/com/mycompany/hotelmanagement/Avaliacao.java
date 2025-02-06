@@ -11,5 +11,12 @@ package com.mycompany.hotelmanagement;
 
 public class Avaliacao 
 {
+    private int id;
+    private int reservaId;
+    private int nota; // Exemplo: de 1 a 5
+    private String comentario;
+
+    
+
     
 }
