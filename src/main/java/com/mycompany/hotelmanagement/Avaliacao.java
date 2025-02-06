@@ -13,9 +13,10 @@ public class Avaliacao
 {
 
     private int id;
-    private string Hospedes ;
-    private int Reserva;
+    private Hospedes hospede ;
+    private Reserva reserva;
     private int nota; // Exemplo: de 1 a 5
     private String comentario;
+    private Quarto quartos ;
 
 }
